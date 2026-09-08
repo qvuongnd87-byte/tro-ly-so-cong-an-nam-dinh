@@ -1,4 +1,5 @@
-const answers = [
+// --- MẢNG 1: NỘI DUNG PHÒNG NGỪA TỘI PHẠM & TNXH ---
+const phongNguaAnswers = [
   {
     keys: ["chuyển tiền", "xác minh tài khoản", "chuyển tiền để xác minh", "bảo đảm"],
     answer: "Người dân cần cảnh giác với yêu cầu chuyển tiền qua điện thoại để “xác minh”, “bảo đảm” hoặc phục vụ điều tra. Nếu nhận được yêu cầu như vậy, không nên chuyển tiền mà cần chủ động liên hệ cơ quan Công an để xác minh."
@@ -21,13 +22,39 @@ const answers = [
   }
 ];
 
+// --- MẢNG 2: NỘI DUNG THỦ TỤC HÀNH CHÍNH VÀ CƯ TRÚ ---
+const cuTruAnswers = [
+  {
+    keys: ["dang ky luu tru", "thong bao luu tru", "khach den o tro", "luu tru"],
+    answer: "Về thủ tục Thông báo lưu trú:\n- Đối tượng: Người đến ở qua đêm tại cơ sở kinh doanh dịch vụ lưu trú, nhà cho thuê, nhà khách, nhà ở của hộ gia đình.\n- Hồ sơ: Trực tiếp qua cổng dịch vụ công trực tuyến hoặc đến trực tiếp Công an phường.\n- Thời hạn: Phải thông báo ngay khi người đến lưu trú (trước 23h đêm, trường hợp đặc biệt trước 08h sáng hôm sau)."
+  },
+  {
+    keys: ["dang ky thuong tru", "nhap ho khau", "nhap khau", "tach khau"],
+    answer: "Về đăng ký thường trú:\n- Điều kiện: Công dân có chỗ ở hợp pháp thuộc quyền sở hữu của mình hoặc được thuê/mượn/ở nhờ (được chủ hộ và chủ chỗ ở hợp pháp đồng ý).\n- Hồ sơ: Tờ khai thay đổi thông tin cư trú; giấy tờ chứng minh chỗ ở hợp pháp.\n- Nộp hồ sơ: Trực tuyến qua Cổng dịch vụ công Quốc gia/Bộ Công an hoặc trực tiếp tại Công an cấp xã/phường."
+  },
+  {
+    keys: ["lam cccd", "lam the cccd", "doi cccd", "cap lai cccd", "can cuoc"],
+    answer: "Về thủ tục cấp/đổi/cấp lại Thẻ Căn cước:\n- Công dân trực tiếp đến bộ phận tiếp nhận hồ sơ Công an cấp huyện hoặc địa điểm được phân cấp.\n- Hồ sơ chuẩn bị: Thẻ Căn cước cũ (nếu có); giấy tờ pháp lý chứng minh thông tin thay đổi (nếu có).\n- Thời gian giải quyết: Theo quy định hiện hành."
+  }
+];
+
 function getAnswer(question){
   const q = question.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
-  for(const item of answers){
+  
+  // 1. Kiểm tra trong mảng phòng ngừa tội phạm
+  for(const item of phongNguaAnswers){
     if(item.keys.some(k => q.includes(k.normalize("NFD").replace(/[\u0300-\u036f]/g,"")))){
       return item.answer;
     }
   }
+
+  // 2. Kiểm tra trong mảng thủ tục cư trú
+  for(const item of cuTruAnswers){
+    if(item.keys.some(k => q.includes(k.normalize("NFD").replace(/[\u0300-\u036f]/g,"")))){
+      return item.answer;
+    }
+  }
+
   return "Nội dung này hiện chưa có trong phạm vi thông tin của Trợ lý số. Để được hướng dẫn chính xác, người dân liên hệ trực tiếp với cơ quan Công an.";
 }
 
