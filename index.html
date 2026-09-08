@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trợ lý số Công an phường Nam Định</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">CA</div>
+      <div>
+        <div class="brand-title">CÔNG AN PHƯỜNG NAM ĐỊNH</div>
+        <div class="brand-subtitle">TRỢ LÝ SỐ PHÒNG NGỪA TỘI PHẠM</div>
+      </div>
+    </div>
+    <div class="version">V1.0 – Bản thử nghiệm</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="shield">🛡️</div>
+      <h1>Trợ lý số phòng ngừa tội phạm</h1>
+      <p>Hỗ trợ người dân nhận biết, phòng ngừa và xử lý ban đầu trước các thủ đoạn lừa đảo, đặc biệt là giả danh Công an.</p>
+    </section>
+
+    <section class="notice">
+      <strong>⚠️ Lưu ý an toàn</strong>
+      <span>Không cung cấp mật khẩu, mã OTP hoặc thông tin bảo mật. Trợ lý số không thay thế việc tiếp nhận, xác minh và giải quyết vụ việc của cơ quan Công an.</span>
+    </section>
+
+    <section class="quick">
+      <h2>Câu hỏi thường gặp</h2>
+      <div class="quick-grid">
+        <button data-question="Tôi nhận được cuộc gọi tự xưng là Công an và nói tôi liên quan đến một vụ án, tôi phải làm gì?">📞 Bị gọi giả danh Công an</button>
+        <button data-question="Công an có yêu cầu người dân chuyển tiền để xác minh tài khoản không?">💰 Có yêu cầu chuyển tiền không?</button>
+        <button data-question="Tôi được yêu cầu cài ứng dụng để xác minh với Công an thì có nên cài không?">📱 Được yêu cầu cài ứng dụng</button>
+        <button data-question="Tôi đã chuyển tiền cho người tự xưng là Công an rồi, bây giờ tôi phải làm gì?">🚨 Đã chuyển tiền cho đối tượng</button>
+      </div>
+    </section>
+
+    <section class="chat-card">
+      <div class="chat-header">
+        <div>
+          <h2>Hỏi Trợ lý số</h2>
+          <p>Trong bản V1.0, câu trả lời được giới hạn theo tài liệu tri thức đã được kiểm duyệt.</p>
+        </div>
+        <span class="status"><i></i> Đang thử nghiệm</span>
+      </div>
+
+      <div id="chat" class="chat">
+        <div class="message assistant">
+          <div class="avatar">AI</div>
+          <div class="bubble">
+            Xin chào. Tôi là Trợ lý số hỗ trợ tuyên truyền phòng ngừa thủ đoạn giả danh Công an để lừa đảo. Bạn có thể chọn một câu hỏi bên trên hoặc nhập câu hỏi bên dưới.
+          </div>
+        </div>
+      </div>
+
+      <form id="chatForm" class="input-row">
+        <input id="question" type="text" placeholder="Nhập câu hỏi của bạn..." autocomplete="off">
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+
+    <section class="process">
+      <h2>Nguyên tắc vận hành</h2>
+      <div class="process-grid">
+        <div><b>01</b><span>CBCS kiểm tra, biên tập nguồn tri thức</span></div>
+        <div><b>02</b><span>AI hỗ trợ trả lời theo nguồn đã duyệt</span></div>
+        <div><b>03</b><span>Người dân tiếp cận qua website, QR, Zalo, Facebook</span></div>
+      </div>
+      <div class="slogan">AI hỗ trợ – CBCS kiểm duyệt – Người dân sử dụng.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Trợ lý số Công an phường Nam Định – V1.0</p>
+    <p>Đây là bản thử nghiệm phục vụ nghiên cứu, xây dựng và ứng dụng sáng kiến.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
