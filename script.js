@@ -1,19 +1,19 @@
 // --- MẢNG 1: PHÒNG NGỪA TỘI PHẠM, TNXH, MA TÚY & HÌNH SỰ ---
 const phongNguaAnswers = [
   {
-    keys: ["chuyển tiền", "xác minh tài khoản", "chuyển tiền để xác minh", "bảo đảm"],
+    keys: ["chuyen tien", "xac minh tai khoan", "chuyen tien de xac minh", "bao dam"],
     answer: "Người dân cần cảnh giác với yêu cầu chuyển tiền qua điện thoại để “xác minh”, “bảo đảm” hoặc phục vụ điều tra. Nếu nhận được yêu cầu như vậy, không nên chuyển tiền mà cần chủ động liên hệ cơ quan Công an để xác minh."
   },
   {
-    keys: ["liên quan đến vụ án", "tự xưng là công an", "gọi điện", "cuộc gọi"],
-    answer: "Bạn cần bình tĩnh, không hoảng sợ và không thực hiện ngay các yêu cầu của người gọi. Không chuyển tiền, không cung cấp thông tin bảo mật và chủ động liên hệ cơ quan Công an để xác minh."
+    keys: ["lien quan den vu an", "tu xung la cong an", "goi dien", "cuoc goi", "ban la ai", "giup gi"],
+    answer: "Tôi là Trợ lý số của Công an phường Nam Định, được thiết kế để hỗ trợ người dân phòng ngừa tội phạm, tệ nạn xã hội và tra cứu nhanh thủ tục hành chính, cư trú, định danh điện tử VNeID."
   },
   {
-    keys: ["cài ứng dụng", "ứng dụng", "đường link", "link", "vneid gia", "cai app"],
+    keys: ["cai ung dung", "ung dung", "duong link", "link", "vneid gia", "cai app"],
     answer: "Không nên tự ý cài đặt ứng dụng (như app giả mạo dịch vụ công, cơ quan thuế, v.v.) hoặc truy cập đường link do người lạ cung cấp. Cần xác định rõ nguồn gốc trước khi thực hiện."
   },
   {
-    keys: ["đã chuyển tiền", "chuyển tiền rồi", "bị lừa", "mất tiền"],
+    keys: ["da chuyen tien", "chuyen tien roi", "bi lua", "mat tien"],
     answer: "Bạn cần khẩn trương liên hệ ngân hàng để được hướng dẫn xử lý giao dịch và đồng thời trình báo ngay với cơ quan Công an. Hãy giữ lại số điện thoại, tin nhắn, tài khoản nhận tiền, thời gian, số tiền và các chứng từ giao dịch liên quan."
   },
   {
@@ -29,7 +29,7 @@ const phongNguaAnswers = [
 // --- MẢNG 2: THỦ TỤC CƯ TRÚ, CĂN CƯỚC & VNEID ---
 const cuTruAnswers = [
   {
-    keys: ["vneid", "kich hoạt vneid", "tai khoan dinh danh", "dinh danh dien tu", "muc do 2"],
+    keys: ["vneid", "kich hoat vneid", "tai khoan dinh danh", "dinh danh dien tu", "muc do 2"],
     answer: "Hướng dẫn về tài khoản định danh điện tử VNeID:\n- Kích hoạt VNeID mức độ 2: Công dân mang theo Thẻ Căn cước gắn chip đến trực tiếp Công an phường để được hỗ trợ thu nhận/kích hoạt.\n- Quên mật khẩu VNeID: Có thể tự lấy lại ngay trên ứng dụng bằng chức năng “Quên mật khẩu” hoặc đến Công an phường để được hướng dẫn."
   },
   {
@@ -37,11 +37,11 @@ const cuTruAnswers = [
     answer: "Về thủ tục cấp, đổi, cấp lại thẻ Căn cước:\n- Địa điểm: Công an cấp huyện hoặc bộ phận được phân cấp.\n- Hồ sơ: Mang theo Thẻ Căn cước cũ (nếu có); trường hợp mất thẻ hoặc thay đổi thông tin nhân thân sẽ được CBCS thu thập sinh trắc học và lập hồ sơ trực tiếp theo quy định."
   },
   {
-    keys: ["dang ky thuong tru", "nhap ho khau", "nhap khau", "tach khau"],
-    answer: "Về đăng ký thường trú:\n- Điều kiện: Công dân có chỗ ở hợp pháp thuộc quyền sở hữu của mình hoặc được thuê/mượn/ở nhờ (được chủ hộ và chủ chỗ ở hợp pháp đồng ý).\n- Hồ sơ: Tờ khai thay đổi thông tin cư trú; giấy tờ chứng minh chỗ ở hợp pháp.\n- Nộp hồ sơ: Trực tuyến qua Cổng dịch vụ công hoặc trực tiếp tại Công an phường."
+    keys: ["dang ky thuong tru", "nhap ho khau", "nhap khau", "tach khau", "thuong tru"],
+    answer: "Về đăng ký thường trú:\n- Điều kiện: Công dân có chỗ ở hợp pháp thuộc quyền sở hữu của mình hoặc được thuê/mượn/ở nhờ (được chủ hộ và chủ chỗ ở hợp pháp đồng ý).\n- Hồ sơ: Tờ khai thay đổi thông tin cư trú; giấy tờ chứng minh chỗ ở hợp pháp.\n- Nộp hồ sơ: Trực tuyến qua Cổng dịch vụ công hoặc trực tiếp tại Công an phường Nam Định."
   },
   {
-    keys: ["dang ky tam tru", "tam tru", "khach den o tro", "thong bao lưu trú"],
+    keys: ["dang ky tam tru", "tam tru", "khach den o tro", "thong bao luu tru", "luu tru"],
     answer: "Về đăng ký tạm trú và thông báo lưu trú:\n- Đăng ký tạm trú: Dành cho công dân đến sinh sống tại chỗ ở hợp pháp ngoài phạm vi đơn vị hành chính cấp xã nơi đăng ký thường trú từ 30 ngày trở lên.\n- Thông báo lưu trú: Khách đến ở qua đêm tại nhà cho thuê, cơ sở lưu trú phải được thông báo qua Cổng dịch vụ công hoặc trực tiếp cho Công an phường trước 23h đêm."
   }
 ];
